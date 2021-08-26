@@ -3,8 +3,17 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-  "email": "asdf@asdf.com",
-  "password": "================="
+  "email": "test@test.com",
+  "password": "12345678"
+}
+
+### Sign in
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+  "email": "test@test.com",
+  "password": "12345678"
 }
 
 ### Find a particular user with a given ID
@@ -24,4 +33,9 @@ content-type: application/json
   "password": "eeeeeeeee"
 }
 
+### Current viewer
+GET http://localhost:3000/auth/whoami
+
+### Sign out
+POST http://localhost:3000/auth/signout
 
